@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<img src="images/bg.jpg" id="m1" width="800" height="400">
+<br>
+<button onclick="forward()"><span> > </span></button>
+<button onclick="backward()"><span>
+                < </span></button>
+
+<script>
+            x = ["images/part1.jpg", "images/part2.jpg", "images/part3.jpg", "images/part4.jpg",
+                "images/part5.jpg"]
+            slide = document.getElementById("m1");
+            count = -1;
+            function forward() {
+
+                count = count + 1;
+                if (count <= x.length) {
+                    if (count == x.length) {
+                        count = 0;
+                    }
+                    slide.src = x[count];
+                }
+            }
+            function backward() {
+
+                count = count - 1;
+                if (count < x.length) {
+                    if (count == -1 || count == -2) {
+                        index = x.length - 1
+                        count = index;
+                    }
+                    slide.src = x[count];
+                }
+            }
+
+
+
+        </script>
+</body>
+
+</html>
