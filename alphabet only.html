@@ -27,6 +27,7 @@
             function check() {
                 name = document.getElementById("name").value;
                 mobile = document.getElementById("mobile").value;
+                email1 = document.getElementById("email").value;
                 alpha = /^[A-Za-z]+$/;
                 if (name == "") {
                     alert("enter the field")
@@ -44,6 +45,16 @@
                 }
                 if (!numeric.test(mobile)) {
                     alert("enter only 5 number")
+                    return false;
+                }
+                /*----------------------------email validator------------------------------*/
+                email = /^([a-zA-Z0-9_])+\@([a-zA-Z])+\.([a-z])+$/;//+\ means confirm that charter should be there
+                if (email1 == "") {
+                    alert("enter the field")
+                    return false;
+                }
+                if (!email1.test(email)) {
+                    alert("enter only valid email")
                     return false;
                 }
 
