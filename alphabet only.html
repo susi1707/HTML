@@ -26,6 +26,7 @@
 
             function check() {
                 name = document.getElementById("name").value;
+                mobile = document.getElementById("mobile").value;
                 alpha = /^[A-Za-z]+$/;
                 if (name == "") {
                     alert("enter the field")
@@ -33,6 +34,16 @@
                 }
                 if (!alpha.test(name)) {
                     alert("enter only name")
+                    return false;
+                }
+                /*----------------------------Number validator------------------------------*/
+                numeric = /^([0-9]{5,})+$/;//limit 5 -->max number any
+                if (mobile == "") {
+                    alert("enter the field")
+                    return false;
+                }
+                if (!numeric.test(mobile)) {
+                    alert("enter only 5 number")
                     return false;
                 }
 
