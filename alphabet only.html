@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<form action="https://www.google.com/" onsubmit="return check()" autocomplete="off" id="myform">
+  <label>Name<span>**</span></label>
+  <input type="text" id="name"><br>
+  <label>father</label>
+  <input type="text"><br>
+  <label>mother</label>
+  <input type="text"><br>
+  <label>mobile<span>**</span></label>
+  <input type="text" id="mobile">
+
+  <br>
+  <button type="submit">submit</button>
+</form>
+<script>
+
+            function check() {
+                name = document.getElementById("name").value;
+                alpha = /^[A-Za-z]+$/;
+                if (name == "") {
+                    alert("enter the field")
+                    return false;
+                }
+                if (!alpha.test(name)) {
+                    alert("enter only name")
+                    return false;
+                }
+
+            }
+
+        </script>
+</body>
+
+</html>
